@@ -1,0 +1,13 @@
+wedlug:
+
+http://www.thinkcode.se/blog/2014/05/29/cucumberjvm-hello-world
+
+
+https://www.ibm.com/developerworks/library/a-automating-ria/#download
+
+http://www.hascode.com/2014/12/bdd-testing-with-cucumber-java-and-junit/
+
+
+
+dodatkowo:
+http://automationrhapsody.com/introduction-to-cucumber-and-bdd-with-examples/
