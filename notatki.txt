@@ -14,9 +14,15 @@ http://automationrhapsody.com/introduction-to-cucumber-and-bdd-with-examples/
 
 **********
 - do pobranie webdriver dla chrome ( dla firefox nie dziala)
-https://chromedriver.storage.googleapis.com/index.html?path=2.30/  (do chrome 58+)
+https://chromedriver.storage.googleapis.com/index.html?path=2.31/ (do chrome 58+)
 - wrzucam do nowego katalogu w katalgu głownym eclipse 
 
 
 --
 http://www.assertselenium.com/eclipse-2/how-to-setup-a-webdriver-project-in-eclipse/
+
+
+
+---
+http://fluentlenium.org/
+upraszcza implementacja klikania w selenium api

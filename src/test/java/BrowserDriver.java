@@ -3,8 +3,11 @@ package test.java;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.stereotype.Component;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -26,6 +29,8 @@ public class BrowserDriver {
 	        	System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
 	        	  mDriver = new ChromeDriver();
+	              mDriver.manage().timeouts().pageLoadTimeout(60, java.util.concurrent.TimeUnit.SECONDS);
+
 	            } finally{
 	                Runtime.getRuntime().addShutdownHook(
 	                    new Thread(new BrowserCleanup()));
@@ -57,5 +62,18 @@ public class BrowserDriver {
     LOG.info("Directing browser to:" + url);
     getCurrentDriver().get(url);
 }
+	
+	public static WebElement waitForElement(WebElement elementToWaitFor){
+		return waitForElement(elementToWaitFor, null);
+	}
+	
+	public static WebElement waitForElement(WebElement elementToWaitFor, Integer waitTimeInSeconds) {
+	    if (waitTimeInSeconds == null) {
+	    	waitTimeInSeconds = 10;
+	    }
+	    
+	    WebDriverWait wait = new WebDriverWait(getCurrentDriver(), waitTimeInSeconds);
+	    return wait.until(ExpectedConditions.visibilityOf(elementToWaitFor));
+	}
 	
 }

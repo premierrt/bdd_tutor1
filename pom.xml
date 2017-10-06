@@ -7,7 +7,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>1.2.5</cucumber.version>
         <selenium.version>3.5.1</selenium.version>
-        <spring.version>3.2.3.RELEASE</spring.version>
+        <spring.version>4.1.4.RELEASE</spring.version>
         
     </properties>
  
@@ -44,12 +44,19 @@
 		<version>${cucumber.version}</version>
 		<scope>test</scope>
 	</dependency>
+		<dependency>
+		<groupId>info.cukes</groupId>
+		<artifactId>cucumber-spring</artifactId>
+		<version>${cucumber.version}</version>
+		<scope>test</scope>
+	</dependency>
 	 <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-server</artifactId>
         <version>${selenium.version}</version>
         <scope>test</scope>
     </dependency>
+    
     <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -62,5 +69,12 @@
 			<version>${spring.version}</version>
 			 <scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			 <scope>test</scope>
+		</dependency>
+		 
 </dependencies>
 </project>
