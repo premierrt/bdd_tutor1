@@ -26,3 +26,10 @@ http://www.assertselenium.com/eclipse-2/how-to-setup-a-webdriver-project-in-ecli
 ---
 http://fluentlenium.org/
 upraszcza implementacja klikania w selenium api
+
+
+-------
+page factory
+http://toolsqa.com/selenium-webdriver/page-object-pattern-model-page-factory/
+https://github.com/SeleniumHQ/selenium/wiki/PageFactory
+https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
