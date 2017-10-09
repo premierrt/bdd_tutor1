@@ -1,3 +1,7 @@
+uruchamianie http-server:
+WebContent\ http-server
+http://localhost:8080/html/MockApplication.html
+
 wedlug:
 
 http://www.thinkcode.se/blog/2014/05/29/cucumberjvm-hello-world
@@ -33,3 +37,19 @@ page factory
 http://toolsqa.com/selenium-webdriver/page-object-pattern-model-page-factory/
 https://github.com/SeleniumHQ/selenium/wiki/PageFactory
 https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
+
+
+
+TO_DO:
+-------------
+/**
+ * przerobic na mock object...
+ * @author tyszewr
+ *
+ */
+public class Users {
+
+
+--raport z testow w maven
+
+---dodac jakies divy i inne testy 

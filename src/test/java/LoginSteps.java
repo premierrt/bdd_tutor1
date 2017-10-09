@@ -13,7 +13,7 @@ import cucumber.api.java.en.When;
 public class LoginSteps {
     private static final Logger LOGGER = Logger.getLogger(LoginSteps.class.getName());
      
-
+    private User user;
     @Autowired
    private BrowserDriver browserDriver;
     
@@ -37,10 +37,25 @@ public class LoginSteps {
     public void when_I_try_to_login(String credentialsType){
         LOGGER.info("Entering: I try to login with " + 
             credentialsType + " credentials");
+        CredentialsType ct = CredentialsType.credentialsTypeForName(credentialsType);
+        switch(ct){
+            case VALID:
+                //create a valid user
+                user = Users.createValidUser();
+            break;
+            case INVALID:
+                //create an invalid user
+                user = Users.createInvalidUser();
+            break;
+        }
+        //try to login
+        loginPage.login(user.getUsername(), user.getPassword());
     }
      
     @Then("^I should see that I logged in '(.+)'$")
     public void then_I_login(String outcome){
         LOGGER.info("Entering: I should see that I logged in " + outcome);
+        loginPage.checkLoginSuccess();
+        
     }
 }
